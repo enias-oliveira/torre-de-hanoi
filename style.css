@@ -1,0 +1,55 @@
+section {
+    display: flex;
+    flex-flow: row wrap; 
+    background-color: #fafafa;
+    justify-content: space-around;
+    height: 40vh;
+    margin-top: 15%;
+}
+
+.palitos {
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    width: 15px;
+    background-color: black;
+    
+}
+
+.primeiroPalito {
+    /* background-color: blue; */
+}
+
+.segundoPalito {
+
+}
+
+.terceiroPalito {
+
+}
+
+.discos {
+    color: #323232;
+    font-weight: 800;
+    text-align: center;
+}
+
+.disco1 {
+    background-color: red;
+    width: 250px;
+}
+
+.disco2 {
+    background-color: green;
+    width: 200px;
+}
+
+.disco3 {
+    background-color: blue;
+    width: 150px;
+}
+
+.disco4 {
+    background-color: yellow;
+    width: 100px;
+}
