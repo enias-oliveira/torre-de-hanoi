@@ -1,4 +1,4 @@
-section {
+main {
     display: flex;
     flex-flow: row wrap; 
     background-color: #fafafa;
@@ -7,7 +7,7 @@ section {
     margin-top: 15%;
 }
 
-.palitos {
+.torres {
     display: flex;
     flex-flow: column-reverse;
     align-items: center;
@@ -16,15 +16,15 @@ section {
     
 }
 
-.primeiroPalito {
+.primeiraTorre {
     /* background-color: blue; */
 }
 
-.segundoPalito {
+.segundaTorre {
 
 }
 
-.terceiroPalito {
+.terceiraTorre {
 
 }
 

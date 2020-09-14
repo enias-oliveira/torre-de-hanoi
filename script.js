@@ -1,1 +1,0 @@
-let palitoStart = document.querySelector()
