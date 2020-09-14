@@ -1,55 +1,96 @@
+body {
+   background-image: url(img/fundoMadeira.jpg);
+   padding: 0;
+   margin: 0;
+}
+
 main {
     display: flex;
+    flex-flow: column; 
+    background: linear-gradient(#d0d0dd, #6a70d8);  
+}
+
+h1 {
+    font-family: 'Ranchers', cursive;
+    letter-spacing: 1px;
+    font-size: 40px;
+    text-align: center; 
+    margin: 15px 0;
+    color: #323232;
+}
+
+.hanoi {
+    display: flex;
     flex-flow: row wrap; 
-    background-color: #fafafa;
+    background: linear-gradient(#6a70d8); 
     justify-content: space-around;
-    height: 40vh;
-    margin-top: 15%;
+    height: 35vh;
+    margin-top: 30%;
 }
 
 .torres {
     display: flex;
     flex-flow: column-reverse;
     align-items: center;
-    width: 15px;
-    background-color: black;
-    
+    width: 20px;
+    background-image: url(img/torre.jpeg);
 }
 
-.primeiraTorre {
-    /* background-color: blue; */
+.torres:hover {
+    cursor: pointer;
 }
 
-.segundaTorre {
-
+.discos:last-child:hover {
+    border: 1px solid #fafafa;
+    box-shadow: 2px 2px 10px #ccc;
 }
 
-.terceiraTorre {
-
-}
+/* .hidden {
+    visibility: hidden;
+    width: 20vw;
+    height: 35vh;
+    background-color: blue;
+} */
 
 .discos {
-    color: #323232;
-    font-weight: 800;
-    text-align: center;
+    height: 35px;
+    border-radius: 10px;
 }
 
 .disco1 {
-    background-color: red;
-    width: 250px;
+    background: rgba(255,170,170, 0.9) ;
+    width: 30vw;
 }
 
 .disco2 {
-    background-color: green;
-    width: 200px;
+    background: rgba(170,255,170, 0.9);
+    width: 25vw;
 }
 
 .disco3 {
-    background-color: blue;
-    width: 150px;
+    background: rgba(170,170,255, 0.9);
+    width: 20vw;
 }
 
 .disco4 {
-    background-color: yellow;
-    width: 100px;
+    background: rgba(255, 255, 170, 0.9);
+    width: 10vw;
+}
+
+.bordaStyle {
+    padding: 7px;
+    background-image: url(img/borda.jpg);
+}
+
+@media (min-width: 768px) {
+    .hanoi {margin-top: 15%;}
+}
+
+@media (min-width: 1024px) {
+    .disco1 {width: 29vw;}
+
+    .hanoi {margin-top: 13%;}
+
+    h1 {font-size: 50px; padding: 10px 0;}
+
 }
