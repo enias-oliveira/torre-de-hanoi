@@ -7,7 +7,7 @@ body {
 main {
     display: flex;
     flex-flow: column; 
-    background: linear-gradient(#d0d0dd, #6a70d8);  
+    background: linear-gradient(#6a70d8,#fafafa); 
 }
 
 h1 {
@@ -22,18 +22,26 @@ h1 {
 .hanoi {
     display: flex;
     flex-flow: row wrap; 
-    background: linear-gradient(#6a70d8); 
     justify-content: space-around;
     height: 35vh;
     margin-top: 30%;
 }
 
 .torres {
+    position: absolute;
+    bottom: 0px;
+    left:-55px;
     display: flex;
     flex-flow: column-reverse;
     align-items: center;
-    width: 20px;
-    background-image: url(img/torre.jpeg);
+    width: 125px;
+    height: 100%;
+}
+
+.palito {
+    position: relative;
+    background-color: black ;
+    width : 15px;
 }
 
 .torres:hover {

@@ -12,8 +12,7 @@ function moveDisco(e) {
             selectedTorre = e.currentTarget
             selectorMode = false
             console.log(selectedTorre)
-        }
-        
+        } 
     } else (insertDisco(e.currentTarget))
 }
 
