@@ -33,7 +33,7 @@ h1 {
     flex-flow: column-reverse;
     align-items: center;
     width: 20px;
-    background-image: url(img/torre.jpeg);
+    background-image: url(img/torreMadeira.jpeg);
 }
 
 .torres:hover {
