@@ -1,3 +1,4 @@
+
 let selectorMode = true
 let selectedTorre = undefined
 let selectedDiscWidth = 0
@@ -5,8 +6,16 @@ let currentTowerDiscWidth = 0
 let movimento = 0
 const contador = document.querySelector(".contadorMovimento")
 const main = document.querySelector("main")
+const victoryHead = document.createElement("h2")
+const hanoiGameSection = document.querySelector(".hanoi")
+
+const reloadButton = document.createElement("div")
+reloadButton.innerText = "Reiniciar Jogo"
+reloadButton.className = "reload_button"
+reloadButton.addEventListener("click", ()=> location.reload())
 
 console.log(contador)
+
 
 document.querySelectorAll(".torres").forEach(item => item.addEventListener('click',moveDisco))
 
@@ -48,11 +57,11 @@ function moveDisco(e) {
     }
 
     function victoryConfirm(tower){
-        if (tower.childElementCount === 4) {
-            const victoryHead = document.createElement("h2")
-            const hanoiGameSection = document.querySelector(".hanoi")
+        
+        if (tower.className ==="torres terceiraTorre" && tower.childElementCount === 4 ) {
             victoryHead.innerText = "Parabéns, você venceu!"
             main.insertBefore(victoryHead,hanoiGameSection)
+            main.insertBefore(reloadButton, hanoiGameSection)
         }
     }
 }
