@@ -19,6 +19,14 @@ h1 {
     color: #323232;
 }
 
+h2 {
+    text-align: center;
+    font-family: 'Ranchers', cursive;
+    font-size: 3rem;
+    color: #76fa76;
+
+}
+
 .hanoi {
     display: flex;
     flex-flow: row wrap; 
@@ -40,7 +48,7 @@ h1 {
 
 .palito {
     position: relative;
-    background-color: black ;
+    background-image: url("img/torreMadeira.jpeg") ;
     width : 15px;
 }
 
@@ -52,13 +60,6 @@ h1 {
     border: 1px solid #fafafa;
     box-shadow: 2px 2px 10px #ccc;
 }
-
-/* .hidden {
-    visibility: hidden;
-    width: 20vw;
-    height: 35vh;
-    background-color: blue;
-} */
 
 .discos {
     height: 35px;
@@ -90,6 +91,16 @@ h1 {
     background-image: url(img/borda.jpg);
 }
 
+.contadorMovimento {
+    width: 100px;
+    font-size: 20px;
+    color: #fafafa;
+    background-color: #323232;
+    text-align: center;
+    padding: 5px;
+    margin: 10% auto;
+}
+
 @media (min-width: 768px) {
     .hanoi {margin-top: 15%;}
 }
@@ -101,4 +112,10 @@ h1 {
 
     h1 {font-size: 50px; padding: 10px 0;}
 
+    .contadorMovimento {margin: 5% auto;}
+
+}
+
+@media (max-width: 320px) {
+    main {width: 100vw;}
 }
