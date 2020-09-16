@@ -27,6 +27,19 @@ h2 {
 
 }
 
+.reload_button {
+    display: inline-block;
+    height: 20px;
+    width: 100px;
+    background-color: red;
+    font-family: 'Ranchers', cursive;
+    border-radius: 5px;
+    color: #fafafa;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
 .hanoi {
     display: flex;
     flex-flow: row wrap; 
