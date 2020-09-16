@@ -6,6 +6,8 @@ let currentTowerDiscWidth = 0
 let movimento = 0
 const contador = document.querySelector(".contadorMovimento")
 const main = document.querySelector("main")
+const victoryHead = document.createElement("h2")
+const hanoiGameSection = document.querySelector(".hanoi")
 
 console.log(contador)
 
@@ -50,8 +52,6 @@ function moveDisco(e) {
 
     function victoryConfirm(tower){
         if (tower.childElementCount === 4) {
-            const victoryHead = document.createElement("h2")
-            const hanoiGameSection = document.querySelector(".hanoi")
             victoryHead.innerText = "Parabéns, você venceu!"
             main.insertBefore(victoryHead,hanoiGameSection)
         }
