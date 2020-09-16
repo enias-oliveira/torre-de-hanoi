@@ -1,9 +1,11 @@
 let selectorMode = true
 let selectedTorre = undefined
-let selectDisc = 0
-let currentDisc = 0
+let selectedDiscWidth = 0
+let currentTowerDiscWidth = 0
 let movimento = 0
-let contador = document.querySelector(".contadorMovimento")
+const contador = document.querySelector(".contadorMovimento")
+const main = document.querySelector("main")
+
 console.log(contador)
 
 document.querySelectorAll(".torres").forEach(item => item.addEventListener('click',moveDisco))
@@ -15,35 +17,44 @@ function moveDisco(e) {
     if (selectorMode) {
         if (discInTorre) {
             selectedTorre = e.currentTarget
-            selectDisc = e.currentTarget.lastElementChild.clientWidth
+            selectedDiscWidth = e.currentTarget.lastElementChild.clientWidth
             selectorMode = false
-            console.log(selectDisc)
+            console.log(selectedDiscWidth)
             console.log(selectedTorre)
         } 
     } else (insertDisco(e.currentTarget))
 
-    function insertDisco(e) {
+    function insertDisco(tower) {
         if (discInTorre) {
-            currentDisc = e.lastElementChild.clientWidth
-            console.log(currentDisc)
-            if (selectDisc < currentDisc) {
-                e.appendChild(selectedTorre.lastElementChild)
+            currentTowerDiscWidth = tower.lastElementChild.clientWidth
+            console.log(currentTowerDiscWidth)
+            if (selectedDiscWidth < currentTowerDiscWidth) {
+                tower.appendChild(selectedTorre.lastElementChild)
                 selectorMode = true
                 movimento += 1
                 contador.innerText = movimento
+                victoryConfirm(tower)
             } else {
                 alert("Você não pode colocar um disco maior em cima de um menor")
                 selectorMode = true
             }
         } else {
-            console.log(currentDisc)
-            e.appendChild(selectedTorre.lastElementChild)
+            console.log(currentTowerDiscWidth)
+            tower.appendChild(selectedTorre.lastElementChild)
             selectorMode = true
             movimento += 1
             contador.innerText = movimento
         }
     }
 
+    function victoryConfirm(tower){
+        if (tower.childElementCount === 4) {
+            const victoryHead = document.createElement("h2")
+            const hanoiGameSection = document.querySelector(".hanoi")
+            victoryHead.innerText = "Parabéns, você venceu!"
+            main.insertBefore(victoryHead,hanoiGameSection)
+        }
+    }
 }
 
 

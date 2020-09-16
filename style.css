@@ -19,6 +19,14 @@ h1 {
     color: #323232;
 }
 
+h2 {
+    text-align: center;
+    font-family: 'Ranchers', cursive;
+    font-size: 3rem;
+    color: #76fa76;
+
+}
+
 .hanoi {
     display: flex;
     flex-flow: row wrap; 
